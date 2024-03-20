@@ -72,7 +72,7 @@ const Home = () => {
       <div className="absolute top-0 bottom-0 left-0 right-0 z-10 bg-gradient-to-br from-pink-500 to-gray-900 opacity-75">
       <div className="max-w-md mx-auto p-6 border rounded-lg border-pink-600 bg-gray-900 relative z-20 shadow-lg top-20">
         <h1 className="text-4xl font-extrabold mb-8 text-center text-white text-shadow-md">
-          Välkommen till registreringen för Lundbyhallens LAN av LBS Borås och Borås stad
+        Registrering för Lundbyhallen LAN, av <br/>LBS Borås och Borås Stad
         </h1>
         <form ref={form} onSubmit={submitPeople}>
           <div className="mb-4">
@@ -103,10 +103,10 @@ const Home = () => {
             />
           </div>
           <div className="mb-4">
-            <label className="block mb-1 text-white">vårdnadshavares telefon</label>
+            <label className="block mb-1 text-white">anhörig telefon</label>
             <input
               type="tel"
-              name="vårdnadshavares telefon"
+              name="anhörig telefon"
               className="w-full border rounded px-3 py-2 bg-gray-800 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-pink-400"
               required
             />
@@ -123,7 +123,7 @@ const Home = () => {
           </div>
           <button
             type="submit"
-            className="bg-pink-600 text-white px-4 py-2 rounded hover:bg-pink-700 w-full shadow-md focus:outline-none focus:ring-2 focus:ring-pink-400"
+            className="btn"
           >
             Submit
           </button>
