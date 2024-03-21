@@ -140,7 +140,7 @@ const Home = () => {
         </form>
       </div>
       </div>
-      <div class="flex max-w-md mx-auto mt-20 justify-between relative p-6">
+      <div className="flex-wrap justify-center flex max-w-md mx-auto mt-20 relative p-6">
       <img src="/pictures/lbs.png" alt="Image 1" class="max-w-md mx-auto mb-4 relative text-white p-6" />
       <img src="/pictures/Boras.png" alt="Image 2" class="max-w-md mx-auto mb-4 relative text-white p-6" />
       </div>
