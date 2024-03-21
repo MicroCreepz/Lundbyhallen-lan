@@ -71,8 +71,8 @@ const Home = () => {
     <div className="py-12 bg-black/50">
       <div class="fixed inset-0 bg-gradient-to-br from-pink-500 to-gray-900 opacity-75"/>
       <div>
-        <div class=" md:flex max-w-md mx-auto mb-4 border relative z-20 bg-gray-900 text-white p-6 rounded-lg ">
-          <h2 class="md:text-4xl text-5xl font-bold mb-4">Grundlig Information</h2>
+        <div class=" md:flex max-w-4xl mx-auto mb-4 border relative z-20 bg-gray-900 text-white p-6 rounded-lg ">
+          <h2 class="mr-10 md:text-4xl text-5xl font-bold mb-4 mt-[60px]">Grundlig Information</h2>
           <ul>
             <li class="mb-4 text-xl">Datum: 1a April</li>
             <li class="mb-4 text-xl">Pris: 50kr per person</li>
@@ -80,9 +80,10 @@ const Home = () => {
             <li class="mb-4 text-xl">Åldrar: Alla (12 och under med anhörig)</li>
           </ul>
         </div>
-      <div className=" md:flex max-w-md mx-auto p-6 border rounded-lg border-pink-600 bg-gray-900 relative z-20 top-20">
-        <h1 className="text-4xl font-extrabold mb-8 text-center text-white text-shadow-md">
-        Registrering för Lundbyhallen LAN <br/>av LBS Borås och Borås Stad
+      <div className=" md:flex max-w-4xl mx-auto p-6 border rounded-lg border-pink-600 bg-gray-900 relative z-20 top-20">
+        <h1 className="mr-8 text-4xl font-extrabold mb-8 text-center text-white text-shadow-md">
+        LBS LANbyhallen i samarbete med <br/><br/><span className='pt-5 text-5xl'>Borås kommun</span>
+        <img src="/pictures/Boras.png" alt="Image 2" class="max-w-xl mx-auto mb-4 relative text-white p-6" />
         </h1>
         <form ref={form} onSubmit={submitPeople}>
           <div className="mb-4">
@@ -90,7 +91,7 @@ const Home = () => {
             <input
               type="text"
               name="firstName"
-              className="w-full border rounded px-3 py-2 bg-gray-800 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-pink-400"
+              className="w-full  border rounded px-3 py-2 bg-gray-800 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-pink-400"
               required
             />
           </div>
@@ -122,7 +123,7 @@ const Home = () => {
             />
           </div>
           <div className="mb-4">
-            <label className="block mb-1 text-white">Ålder (vårdnadshavare ska med under 12)</label>
+            <label className="block mb-1 text-white">Ålder (anhörig ska med under 12år)</label>
             <input
               type="number"
               name="Ålder"
@@ -140,9 +141,9 @@ const Home = () => {
         </form>
       </div>
       </div>
+       
       <div className="flex-wrap justify-center flex max-w-md mx-auto mt-20 relative p-6">
       <img src="/pictures/lbs.png" alt="Image 1" class="max-w-md mx-auto mb-4 relative text-white p-6" />
-      <img src="/pictures/Boras.png" alt="Image 2" class="max-w-md mx-auto mb-4 relative text-white p-6" />
       </div>
     </div>
     
