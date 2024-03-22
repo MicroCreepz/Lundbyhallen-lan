@@ -1,12 +1,25 @@
 "use client"
 
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import { storage, db } from '../firebase';
 import { ref, uploadBytes, getDownloadURL } from 'firebase/storage';
 import { addDoc, collection } from 'firebase/firestore';
 
 const Home = () => {
   const form = useRef();
+  const [age, setAge] = useState('');
+  const [phoneNumberLabel, setPhoneNumberLabel] = useState('Telefon');
+
+  const handleAgeChange = (e) => {
+    const newAge = parseInt(e.target.value);
+    setAge(newAge);
+
+    if (newAge < 18) {
+      setPhoneNumberLabel('Telefon till anhörig');
+    } else {
+      setPhoneNumberLabel('Telefon');
+    }
+  };
 
   const submitPeople = (e) => {
     e.preventDefault();
@@ -67,6 +80,8 @@ const Home = () => {
     }
   };
 
+  
+
   return (
     <div className="py-12 bg-black/50">
       <div class="fixed inset-0 bg-gradient-to-br from-pink-500 to-gray-900 opacity-75"/>
@@ -76,15 +91,15 @@ const Home = () => {
           <ul>
             <li class="mb-4 text-xl"><a className='font-bold'>Datum:</a> 1a April</li>
             <li class="mb-4 text-xl"><a className='font-bold'>Pris:</a> 50kr per person</li>
-            <li class="mb-4 text-xl"><a className='font-bold'>Plats:</a> Lundbyhallen (Armbågavägen 7)</li>
-            <li class="mb-4 text-xl"><a className='font-bold'>OBS:</a> Ta med din egna dator!</li>
+            <li class="mb-4 text-xl"><a className='font-bold'>Plats:</a> Lundbyhallen <a href=''>(Armbågavägen 7)</a></li>
             <li class="mb-4 text-xl"><a className='font-bold'>Åldrar:</a> Alla (12 och under med anhörig)</li>
+            <li class="mb-4 text-xl"><a className='font-bold'>OBS:</a> Ta med din egna dator!</li>
           </ul>
         </div>
       <div className=" md:flex max-w-4xl mx-auto p-6 border rounded-lg border-pink-600 bg-gray-900 relative z-20 top-20">
         <h1 className="mr-8 text-4xl font-extrabold mb-8 text-center text-white text-shadow-md">
-        LBS LANbyhallen i samarbete med <br/><br/><span className='pt-5 text-5xl'>Borås kommun</span>
-        <img src="/pictures/Boras.png" alt="Image 2" class="max-w-4xl mx-auto mb-4 relative text-white p-6" />
+        LBS LANbyhallen i samarbete med   
+        <img src="/pictures/Boras.png" alt="Image 2" class="w-[500px] max-w-5xl mx-auto mb-4 relative text-white p-6"/>
         </h1>
         <form ref={form} onSubmit={submitPeople}>
           <div className="mb-4">
@@ -115,21 +130,23 @@ const Home = () => {
             />
           </div>
           <div className="mb-4">
-            <label className="block mb-1 text-white">Telefon till anhörig</label>
-            <input
-              type="tel"
-              name="anhörig telefon"
-              className="w-full border rounded px-3 py-2 bg-gray-800 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-pink-400"
-              required
-            />
-          </div>
-          <div className="mb-4">
             <label className="block mb-1 text-white">Ålder (anhörig ska med under 12år)</label>
             <input
               type="number"
               name="Ålder"
               className="w-full border rounded px-3 py-2 bg-gray-800 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-pink-400"
               min={1}
+              required
+              value={age}
+              onChange={handleAgeChange}
+            />
+          </div>
+          <div className="mb-4" id="phoneNumberSection">
+            <label className="block mb-1 text-white">{phoneNumberLabel}</label>
+            <input
+              type="tel"
+              name="anhörig telefon"
+              className="w-full border rounded px-3 py-2 bg-gray-800 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-pink-400"
               required
             />
           </div>
