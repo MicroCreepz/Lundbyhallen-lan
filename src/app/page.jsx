@@ -91,7 +91,7 @@ const Home = () => {
           <ul>
             <li class="mb-4 text-xl"><a className='font-bold'>Datum:</a> 1a April</li>
             <li class="mb-4 text-xl"><a className='font-bold'>Pris:</a> 50kr per person</li>
-            <li class="mb-4 text-xl"><a className='font-bold'>Plats:</a> Lundbyhallen <a href=''>(Armbågavägen 7)</a></li>
+            <li class="mb-4 text-xl"><a className='font-bold'>Plats:</a> Lundbyhallen (<a className='underline text-blue-500' href='https://maps.app.goo.gl/3ztYZgztjs149SMz5?g_st=ic'>Armbågavägen 7</a>)</li>
             <li class="mb-4 text-xl"><a className='font-bold'>Åldrar:</a> Alla (12 och under med anhörig)</li>
             <li class="mb-4 text-xl"><a className='font-bold'>OBS:</a> Ta med din egna dator!</li>
           </ul>
