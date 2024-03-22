@@ -74,16 +74,17 @@ const Home = () => {
         <div class=" md:flex max-w-4xl mx-auto mb-4 border relative z-20 bg-gray-900 text-white p-6 rounded-lg ">
           <h2 class="mr-10 md:text-4xl text-5xl font-bold mb-4 mt-[60px]">Grundlig Information</h2>
           <ul>
-            <li class="mb-4 text-xl">Datum: 1a April</li>
-            <li class="mb-4 text-xl">Pris: 50kr per person</li>
-            <li class="mb-4 text-xl">Plats: Lundbyhallen (Armbågavägen 7)</li>
-            <li class="mb-4 text-xl">Åldrar: Alla (12 och under med anhörig)</li>
+            <li class="mb-4 text-xl"><a className='font-bold'>Datum:</a> 1a April</li>
+            <li class="mb-4 text-xl"><a className='font-bold'>Pris:</a> 50kr per person</li>
+            <li class="mb-4 text-xl"><a className='font-bold'>Plats:</a> Lundbyhallen (Armbågavägen 7)</li>
+            <li class="mb-4 text-xl"><a className='font-bold'>OBS:</a> Ta med din egna dator!</li>
+            <li class="mb-4 text-xl"><a className='font-bold'>Åldrar:</a> Alla (12 och under med anhörig)</li>
           </ul>
         </div>
       <div className=" md:flex max-w-4xl mx-auto p-6 border rounded-lg border-pink-600 bg-gray-900 relative z-20 top-20">
         <h1 className="mr-8 text-4xl font-extrabold mb-8 text-center text-white text-shadow-md">
         LBS LANbyhallen i samarbete med <br/><br/><span className='pt-5 text-5xl'>Borås kommun</span>
-        <img src="/pictures/Boras.png" alt="Image 2" class="max-w-xl mx-auto mb-4 relative text-white p-6" />
+        <img src="/pictures/Boras.png" alt="Image 2" class="max-w-4xl mx-auto mb-4 relative text-white p-6" />
         </h1>
         <form ref={form} onSubmit={submitPeople}>
           <div className="mb-4">
@@ -114,7 +115,7 @@ const Home = () => {
             />
           </div>
           <div className="mb-4">
-            <label className="block mb-1 text-white">anhörig telefon</label>
+            <label className="block mb-1 text-white">Telefon till anhörig</label>
             <input
               type="tel"
               name="anhörig telefon"
@@ -143,7 +144,8 @@ const Home = () => {
       </div>
        
       <div className="flex-wrap justify-center flex max-w-md mx-auto mt-20 relative p-6">
-      <img src="/pictures/lbs.png" alt="Image 1" class="max-w-md mx-auto mb-4 relative text-white p-6" />
+      <img src="/pictures/lbs.png" alt="Image 1" class="max-w-md mx-auto relative text-white p-6" />
+      <a href="">LBS Systemutveckling Sy21</a>
       </div>
     </div>
     
