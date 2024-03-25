@@ -34,12 +34,12 @@ const Home = () => {
     const existingPeople = querySnapshot.docs.map(doc => doc.data());
     const isEmailAlreadyRegistered = existingPeople.some(person => person.email === email);
 
-    if (isEmailAlreadyRegistered) {
-      alert('This email is already registered. Please use a different email.');
-      return; // Exit the function if the email is already registered
-    }
-
     const storageRef = ref(storage, `people/${name.name}`);
+
+    //if (isEmailAlreadyRegistered) {
+      //alert('This email is already registered. Please use a different email.');
+      //return; // Exit the function if the email is already registered
+    //}
 
     uploadBytes(storageRef).then(
       (snapshot) => {
@@ -91,7 +91,7 @@ const Home = () => {
     }
   };
 
-  
+
 
   
 
@@ -100,8 +100,8 @@ const Home = () => {
       {submitted && (
         <div className="absolute inset-0 flex items-center justify-center bg-gray-900 bg-opacity-75 z-50">
           <div className="bg-white p-8 rounded-lg">
-            <h2 className="text-2xl font-bold mb-4">Thank you for signing up!</h2>
-            <p>We appreciate your registration.</p>
+            <h2 className="text-2xl font-bold mb-4 text-black">Tack för att du registrera dig!</h2>
+            <p className='text-black'>1:a April (09:00 - 21:00)</p>
           </div>
         </div>
       )}
