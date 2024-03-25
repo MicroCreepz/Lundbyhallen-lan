@@ -5,11 +5,13 @@ import { storage, db } from '../firebase';
 import { ref, uploadBytes, getDownloadURL } from 'firebase/storage';
 import { addDoc, collection, getDocs } from 'firebase/firestore';
 
+
 const Home = () => {
   const form = useRef();
   const [age, setAge] = useState('');
   const [phoneNumberLabel, setPhoneNumberLabel] = useState('Telefon');
   const [submitted, setSubmitted] = useState(false); // State to track form submission
+  
 
   const handleAgeChange = (e) => {
     const newAge = parseInt(e.target.value);
@@ -36,10 +38,10 @@ const Home = () => {
 
     const storageRef = ref(storage, `people/${name.name}`);
 
-    if (isEmailAlreadyRegistered) {
-      alert('This email is already registered. Please use a different email.');
-      return; // Exit the function if the email is already registered
-    }
+   // if (isEmailAlreadyRegistered) {
+   //   alert('Denna mailen används redan, använd en ny');
+    //  return; // Exit the function if the email is already registered
+    //}
 
     uploadBytes(storageRef).then(
       (snapshot) => {
