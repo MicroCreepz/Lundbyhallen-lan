@@ -110,7 +110,7 @@ const Home = () => {
         <div class=" md:flex max-w-5xl mx-auto mb-4 border relative z-20 bg-gray-900 text-white p-6 rounded-lg ">
           <h2 class="mr-10 md:text-4xl text-5xl font-bold mb-4 mt-[60px]">Grundlig Information</h2>
           <ul>
-            <li class="mb-4 text-xl"><a className='font-bold'>Datum:</a> 1a April</li>
+            <li class="mb-4 text-xl"><a className='font-bold'>Datum:</a> 1a April 09:00 - 21:00</li>
             <li class="mb-4 text-xl"><a className='font-bold'>Pris:</a> 50kr p.p (betalas vid dörren)</li>
             <li class="mb-4 text-xl"><a className='font-bold'>Plats:</a> Lundbyhallen (<a className='underline text-blue-500' href='https://maps.app.goo.gl/3ztYZgztjs149SMz5?g_st=ic' target="_blank" >Armbågavägen 7</a>)</li>
             <li class="mb-4 text-xl"><a className='font-bold'>Åldrar:</a> Alla (12 och under med anhörig)</li>
