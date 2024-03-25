@@ -36,10 +36,10 @@ const Home = () => {
 
     const storageRef = ref(storage, `people/${name.name}`);
 
-    //if (isEmailAlreadyRegistered) {
-      //alert('This email is already registered. Please use a different email.');
-      //return; // Exit the function if the email is already registered
-    //}
+    if (isEmailAlreadyRegistered) {
+      alert('This email is already registered. Please use a different email.');
+      return; // Exit the function if the email is already registered
+    }
 
     uploadBytes(storageRef).then(
       (snapshot) => {
