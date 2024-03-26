@@ -67,7 +67,7 @@ const Home = () => {
             <h2 className="text-2xl font-bold mb-4 text-black">Tack för att du registrera dig!</h2>
             <p className='text-black'>1:a April (09:00 - 21:00)</p>
             <button onClick={() => setSubmitted(false)}
-              className="bg-pink-600 text-white px-4 py-2 rounded hover:bg-pink-700 w-full shadow-md focus:outline-none focus:ring-2 focus:ring-pink-400"
+              className="mt-4 bg-pink-600 text-white px-4 py-2 rounded hover:bg-pink-700 w-full shadow-md focus:outline-none focus:ring-2 focus:ring-pink-400"
             >
               Registrera en till
             </button>
