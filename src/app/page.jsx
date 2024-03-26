@@ -89,7 +89,7 @@ const Home = () => {
       <div className=" md:flex max-w-5xl mx-auto p-6 border rounded-lg border-pink-600 bg-gray-900 relative z-20 top-20">
         <h1 className="mr-8 text-4xl font-extrabold mb-8 text-center text-white text-shadow-md">
         LBS LANbyhallen i samarbete med   
-        <img src="/pictures/Boras.png" alt="Image 2" className="w-[500px] max-w-5xl mx-auto mb-4 relative text-white p-6"/>
+        <img src="/pictures/Boras.png" alt="Image 2" className="md:w-[500px] w-[350px] max-w-5xl mx-auto mb-4 relative text-white p-6"/>
         </h1>
         <form ref={form} onSubmit={submitPeople}>
           <div className="mb-4">
